@@ -1,69 +1,124 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IronFit Gym</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IronZone - Tienda Fitness</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="font-sans bg-gray-900 text-white">
+<body class="bg-gray-900 text-white font-sans leading-relaxed">
 
   <!-- Navbar -->
-  <header class="bg-black">
-    <nav class="container mx-auto flex flex-col md:flex-row justify-between items-center p-4">
-      <h1 class="text-2xl font-bold text-red-600">IronFit</h1>
-      <ul class="flex space-x-4 mt-2 md:mt-0">
-        <li><a href="#inicio" class="hover:text-red-500">Inicio</a></li>
-        <li><a href="#servicios" class="hover:text-red-500">Planes</a></li>
-        <li><a href="#contacto" class="hover:text-red-500">Contacto</a></li>
+  <header class="bg-gray-800 shadow-lg">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-green-400">IronZone</h1>
+      <ul class="flex space-x-6 text-sm font-medium">
+        <li><a href="#inicio" class="hover:text-green-400 transition">Inicio</a></li>
+        <li><a href="#servicios" class="hover:text-green-400 transition">Servicios</a></li>
+        <li><a href="#carrito" class="hover:text-green-400 transition">Carrito</a></li>
+        <li><a href="#contacto" class="hover:text-green-400 transition">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Inicio -->
-  <section id="inicio" class="text-center py-12 px-4 bg-gray-800">
-    <h2 class="text-4xl font-bold mb-4 text-red-600">Bienvenido a IronFit Gym</h2>
-    <img src="IronFit.jpg" alt="Gimnasio" class="mx-auto rounded-lg shadow-lg w-full max-w-xl mb-4">
-    <p class="text-gray-300 text-lg">Fuerza, disciplina y resultados. Tu transformación comienza aquí.</p>
+  <section id="inicio" class="relative h-screen flex items-center justify-center bg-black">
+    <img src="Isec.gif" alt="GIF de portada" class="absolute inset-0 w-full h-full object-cover opacity-30">
+    <div class="relative z-10 text-center">
+      <h2 class="text-5xl font-extrabold text-green-400 mb-4 drop-shadow-lg">Bienvenido a IronZone</h2>
+      <p class="text-lg text-white mb-6">Tu tienda fitness con todo lo que necesitas para alcanzar tus metas.</p>
+      <a href="#servicios" class="bg-green-500 text-black px-6 py-3 rounded-full font-semibold hover:bg-green-400 transition duration-300">Ver Servicios</a>
+    </div>
   </section>
 
-  <!-- Planes -->
-  <section id="servicios" class="py-12 px-4 bg-gray-100 text-gray-900">
-    <h2 class="text-3xl font-bold mb-8 text-center text-red-700">Nuestros Planes</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-      <div class="bg-white p-6 rounded-lg shadow hover:scale-105 transition-transform">
-        <h3 class="text-xl font-semibold mb-2">Mensual</h3>
-        <p>Acceso ilimitado al gimnasio con rutinas personalizadas.</p>
+  <!-- Servicios -->
+  <section id="servicios" class="py-20 bg-gray-900">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-12 text-center text-green-400">Nuestros Servicios</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-gray-800 p-6 rounded-xl hover:shadow-xl transition">
+          <h3 class="text-xl font-semibold mb-2 text-white">Venta de suplementos</h3>
+          <p class="text-gray-400">Proteínas, creatina, aminoácidos y más de marcas certificadas.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl hover:shadow-xl transition">
+          <h3 class="text-xl font-semibold mb-2 text-white">Accesorios deportivos</h3>
+          <p class="text-gray-400">Guantes, cinturones, bandas elásticas, botellas shaker y más.</p>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl hover:shadow-xl transition">
+          <h3 class="text-xl font-semibold mb-2 text-white">Planificación de rutinas</h3>
+          <p class="text-gray-400">Planes de entrenamiento y asesoría personalizada con instructores certificados.</p>
+        </div>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow hover:scale-105 transition-transform">
-        <h3 class="text-xl font-semibold mb-2">Trimestral</h3>
-        <p>Incluye asesoría nutricional y seguimiento de progreso.</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow hover:scale-105 transition-transform">
-        <h3 class="text-xl font-semibold mb-2">Anual</h3>
-        <p>Acceso VIP a clases grupales, descuentos y más.</p>
+    </div>
+  </section>
+
+  <!-- Carrito -->
+  <section id="carrito" class="py-20 bg-gray-800">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-8 text-center border-b border-gray-700 pb-2 text-green-400">Carrito de Pedidos</h2>
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-gray-900 border border-gray-700 rounded-lg shadow text-sm">
+          <thead>
+            <tr class="bg-gray-700 text-gray-200">
+              <th class="px-6 py-3 text-left">Producto</th>
+              <th class="px-6 py-3 text-left">Cantidad</th>
+              <th class="px-6 py-3 text-left">Precio Unitario</th>
+              <th class="px-6 py-3 text-left">Subtotal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="hover:bg-gray-700 transition">
+              <td class="px-6 py-4">Proteína Whey 2kg</td>
+              <td class="px-6 py-4">1</td>
+              <td class="px-6 py-4">S/ 150.00</td>
+              <td class="px-6 py-4">S/ 150.00</td>
+            </tr>
+            <tr class="hover:bg-gray-700 transition">
+              <td class="px-6 py-4">Guantes de gimnasio</td>
+              <td class="px-6 py-4">2</td>
+              <td class="px-6 py-4">S/ 40.00</td>
+              <td class="px-6 py-4">S/ 80.00</td>
+            </tr>
+            <tr class="hover:bg-gray-700 transition">
+              <td class="px-6 py-4">Toalla personalizada</td>
+              <td class="px-6 py-4">1</td>
+              <td class="px-6 py-4">S/ 30.00</td>
+              <td class="px-6 py-4">S/ 30.00</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr class="bg-gray-900 text-green-400 font-semibold">
+              <td colspan="3" class="px-6 py-4 text-right">Total:</td>
+              <td class="px-6 py-4">S/ 260.00</td>
+            </tr>
+          </tfoot>
+        </table>
       </div>
     </div>
   </section>
 
   <!-- Contacto -->
-  <section id="contacto" class="py-12 px-4 bg-gray-800">
-    <h2 class="text-3xl font-bold text-center mb-8 text-red-600">Contáctanos</h2>
-    <form class="max-w-xl mx-auto flex flex-col gap-4">
-      <input type="text" placeholder="Nombre" required class="p-3 border border-gray-600 rounded bg-gray-100 text-black">
-      <input type="email" placeholder="Correo electrónico" required class="p-3 border border-gray-600 rounded bg-gray-100 text-black">
-      <textarea placeholder="Mensaje o consulta" required class="p-3 border border-gray-600 rounded bg-gray-100 text-black"></textarea>
-      <button type="submit" class="bg-red-700 text-white py-2 px-4 rounded hover:bg-red-600 transition">Enviar</button>
-    </form>
+  <section id="contacto" class="py-20 bg-gray-900">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-6 text-center text-green-400">Contáctanos</h2>
+      <form class="bg-gray-800 p-8 rounded-xl shadow-xl space-y-6">
+        <input type="text" placeholder="Nombre completo" class="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500">
+        <input type="email" placeholder="Correo electrónico" class="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500">
+        <textarea rows="4" placeholder="Mensaje" class="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+        <button type="submit" class="bg-green-500 text-black px-6 py-3 rounded-full font-semibold hover:bg-green-400 transition duration-300">Enviar Mensaje</button>
+      </form>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-black text-center py-4">
-    <p class="text-gray-400">&copy; 2025 IronFit Gym. Todos los derechos reservados.</p>
-    <div class="mt-2">
-      <a href="#" class="text-red-500 hover:text-white mx-1">Facebook</a>|
-      <a href="#" class="text-red-500 hover:text-white mx-1">Instagram</a>|
-      <a href="#" class="text-red-500 hover:text-white mx-1">YouTube</a>
+  <footer class="bg-gray-800 py-6 mt-12">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-400">
+      <p>&copy; 2025 IronZone. Todos los derechos reservados.</p>
+      <div class="flex space-x-4 mt-4 sm:mt-0">
+        <a href="#" class="hover:text-green-400 transition">Facebook</a>
+        <a href="#" class="hover:text-green-400 transition">Instagram</a>
+        <a href="#" class="hover:text-green-400 transition">TikTok</a>
+      </div>
     </div>
   </footer>
 
